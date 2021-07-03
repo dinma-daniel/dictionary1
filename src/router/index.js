@@ -1,16 +1,16 @@
-import { createRouter, createWebHistory } from "vue-router";
-import Home from "../views/Home.vue";
-import Dictionary from "../views/Dictionary.vue";
+import { createRouter, createWebHistory } from 'vue-router'
+import Home from '../views/Home.vue'
+import Dictionary from '../views/Dictionary.vue'
 
 const routes = [
   {
-    path: "/",
-    name: "Home",
+    path: '/',
+    name: 'Home',
     component: Home,
   },
   {
-    path: "/dictionary",
-    name: "Dictionary",
+    path: '/dictionary',
+    name: 'Dictionary',
     component: Dictionary,
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
@@ -18,11 +18,11 @@ const routes = [
     // component: () =>
     //   import(/* webpackChunkName: "about" */ "../views/About.vue"),
   },
-];
+]
 
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
   routes,
-});
+})
 
-export default router;
+export default router
