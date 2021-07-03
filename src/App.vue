@@ -1,7 +1,5 @@
 <template>
-  <div id="nav">
-    
-  </div>
+  <div id="nav"></div>
   <router-view />
 </template>
 
@@ -12,11 +10,6 @@
   -moz-osx-font-smoothing: grayscale;
   margin: 0;
   padding: 0;
-    background-color: #313131;
-    
+  background-color: #313131;
 }
-
-
-
-
 </style>

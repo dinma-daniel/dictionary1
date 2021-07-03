@@ -1,33 +1,28 @@
 <template>
-<div class="containerr">
-<div class="about">
-    <Card />
-</div>
-</div>
-<router-view></router-view>
+  <div class="containerr">
+    <div class="about">
+      <Card />
+    </div>
+  </div>
+  <router-view></router-view>
 </template>
 
 <script>
-import Card from "../components/Card.vue";
+import Card from '../components/Card.vue'
 
 export default {
-    name: 'Dictionary',
-    components: {
-        Card,
-        
-    },
-    data(){
-return{
- 
-}
-    },
-   
+  name: 'Dictionary',
+  components: {
+    Card,
+  },
+  data() {
+    return {}
+  },
 }
 </script>
 
 <style scoped>
-
-.containerr{
+.containerr {
   height: 100vh;
   display: flex;
   justify-content: center;
