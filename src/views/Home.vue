@@ -3,16 +3,18 @@
     <Nav/>
 <div class="main">
     <div class="content">
-        <h1 class="head">This is an app that <em>generates new words</em> everytime</h1>
+        <h1 class="head">This is an app that allows you to <u>Search for words</u></h1>
         <div class="buttons">
+            <a href="https://github.com/dinma-daniel/dictionary1">
             <button class="git"> view in Github</button>
+            </a>
             <router-link to="/dictionary">
             <button class="app">Use app</button>
             </router-link>
         </div>
     </div>
-    <div class="imag">
-        <img :src="image" >
+    <div >
+        <img class="imag" src="../assets/dictionary.png" >
     </div>
     </div>
 </div>
@@ -28,7 +30,7 @@ export default {
     },
     data(){
         return{
-            image: '../assets/logo.png'
+           
         }
     }
 };
@@ -45,7 +47,7 @@ export default {
 
 .home {
     /* border: 1px solid red; */
-    background-color: var(--color1);
+    /* background-color: #313131; */
     margin: 0;
     padding: 0;
     height: 100vh;
@@ -55,7 +57,7 @@ export default {
 
 .main{
      /* border: 1px solid red; */
-     margin: 8rem 0;
+     margin: 3rem 0;
      display: flex;
 }
 
@@ -63,9 +65,17 @@ export default {
     /* border: 1px solid red; */
     display: flex;
     flex-direction: column;
-    width: 50%;
-    justify-content: center;
-    margin: 0 4rem;
+    width: 60%;
+    margin-left: 4rem;
+   margin-top: 8rem;
+}
+
+.imag{
+    /* border: 1px solid red; */
+    width: 100%;
+    height: 100%;
+   display: flex;
+   justify-content: left;
 }
 
 .head {
@@ -73,12 +83,12 @@ export default {
     font-family: montserrat;
     font-size: 1.7rem;
     margin-bottom: 2.3rem;
-    width: 80%;
+    width: 100%;
 }
 
-em {
-    font-family: josefinSlab;
-    font-weight: lighter;
+u {
+    /* font-family: robotto; */
+    font-weight: 600;
     color: #ec625f;
 
 }
@@ -109,7 +119,32 @@ button {
     font-size: 1rem;
 }
 
-.imag{
-    width: 200px;
+
+
+
+@media (max-width: 900px) {
+
+    .home{
+        overflow-x: hidden;
+        height: auto;
+    }
+    
+.main{
+    flex-direction: column;
 }
+
+.content{
+    width: 80%;
+    margin-top: 2rem;
+    margin-left: 3.2rem;
+}
+
+.imag{
+    margin-top: 8rem;
+    width: 100%;
+}
+
+
+}
+
 </style>

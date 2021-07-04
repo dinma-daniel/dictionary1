@@ -26,10 +26,6 @@ return{
 </script>
 
 <style scoped>
-.about{
-  /* border: 1px solid black; */
-
-}
 
 .containerr{
   height: 100vh;

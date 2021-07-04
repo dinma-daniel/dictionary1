@@ -6,7 +6,7 @@
             <i class="fab fa-dribbble"></i>
             </a>
              <a href="">
-           <i class="far fa-envelope"></i>
+           <i class="far fa-envelope" @click="generateMail()"></i>
              </a>
         </div>
    
@@ -19,7 +19,12 @@
 
 <script>
 export default {
-    name: 'Nav'
+    name: 'Nav',
+    methods: {
+        generateMail(){
+            alert('send mail to ddunebari@gmail.com, thank you')
+        }
+    }
 }
 </script>
 
@@ -37,7 +42,7 @@ export default {
     justify-content: space-between;
     margin: 4rem;
     width: 28%;
-    min-width: 600px;
+    min-width: 650px;
 }
 
 .left {
@@ -92,5 +97,19 @@ h2 {
 
 h3 {
     font-weight: 300;
+}
+
+@media (max-width: 900px){
+
+.nav__bar{
+    flex-direction: column;
+    min-width: 80%;
+    margin-left: 3rem;
+}
+
+.right{
+    margin-top: 2rem;
+}
+
 }
 </style>

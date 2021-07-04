@@ -2,16 +2,23 @@
 <div class="container">
 <Search :getSearch="addSearch" />
     <div class="cardd">
-        <div class="content" v-for="item in list" :key="item.id">
+    
+        <div class="content" v-for="item in list" :key="item.id" >
+            <div class="word">
+<div class="audio">
+    <i class="fas fa-volume-down fa-2x"></i>
+</div>
 
-            <div class="right">
+            <div class="right" >
                 <h1 class="name">{{item.word}}</h1>
                 <h1 class="pronounce">{{item.phonetics[0].text}}</h1>
+            </div>
             </div>
             <div>
                 <h1 class="contentt">{{item.meanings[1].definitions[0].definition}}</h1>
             </div>
-        </div>
+        
+</div>
 
     </div>
 </div>
@@ -37,6 +44,7 @@ export default {
     methods: {
         addSearch(search) {
             this.searchh = search
+            // search = search.replace(/\s/g,'')
             console.log(this.searchh)
             this.axios.get(`https://api.dictionaryapi.dev/api/v2/entries/en_US/${this.searchh}`)
                 .then((result) => {
@@ -101,5 +109,21 @@ h1 {
     font-size: 1.3rem;
     font-family: Cormorant;
     font-weight: 500;
+}
+
+
+.word{
+    /* border: 1px solid black; */
+    display: flex;
+}
+
+.audio{
+    /* border: 1px solid black;  */
+    margin-right: 1.5rem;
+}
+
+.fas{
+    margin-top: .5rem;
+    
 }
 </style>

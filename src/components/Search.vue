@@ -1,6 +1,6 @@
 <template>
     <div class="search__container">
-        <input class="search__bar" type="text" v-model="name">
+        <input class="search__bar" type="text" v-model="name" placeholder="Search for a word">
     
         <button class="btn" @click="getSearch(name)">Search</button>
     </div>
@@ -28,7 +28,7 @@ export default {
     flex: 0.8;
     background-color: #FFC996;
     border: none;
-    font-size: 1rem;
+    /* font-size: 1rem; */
     font-weight: 600;
 }
 
@@ -46,6 +46,8 @@ export default {
     border-radius: 0 10px 10px 0;
     border: 1px solid #FFC996;
      flex: 0.2;
-     background-color: sandybrown;
+     background-color: #f4a460;
+     font-weight: 700;
+    
 }
 </style>
